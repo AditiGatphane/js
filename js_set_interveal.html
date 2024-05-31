@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="stop()">Stop</button>
+    <script>
+        function sample(x,y)
+        {
+            alert("Example of setInterval"+x+" "+y)
+        }
+        var x=setInterval(sample,4000,10,20)
+        smaple(x)
+        // setTimeout(sample,6000,10,20)
+        // setTimeout(sample,9000,10,20)
+
+        
+        function stop()
+        {
+            clearTimeout(x)
+        }
+        </script>
+</body>
+</html>

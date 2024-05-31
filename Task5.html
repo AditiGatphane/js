@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .box
+       {
+       position: absolute;
+       }
+    </style>
+</head>
+<body>
+    <form method="post" onclick="box1()">
+        <table>
+            <select name="" id="mas1">
+                <option value="0">Select Option</option>
+                <option value="1">Username</option>
+                <option value="2">Address</option>
+                <option value="3">MobileNumber</option>
+                <option value="4">EmailAddress</option> 
+            </select>
+            <div class="box">
+            <input type="text" placeholder="Username" id="uname" name="Username"><br><br>
+            <input type="text" placeholder="Adress" id="add" name="Adress"><br><br>
+            <input type="text" placeholder="Mobilenumber" id="mobn" name="MobileNumber"><br><br>
+            <input type="text" placeholder="EmailAddress" id="Email" name="EmailAddress">
+        </div>
+        </table>
+    </form>
+    <script>
+        function box1()
+        {
+            var username=document.getElementById("msg1").value
+            document.getElementById("box").classList.remove("uname")
+
+        }
+    </script>
+</body>
+</html>

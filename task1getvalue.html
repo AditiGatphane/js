@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1getvalue</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter number1" id="num1">
+     <input type="text" placeholder="Enter Number2" id="num2">
+    <button onclick="addition()">Addition</button>
+    <button onclick="subtraction()">Subtraction</button>
+    <button onclick="Multiplication()">Multiplication</button>
+    <p id="para1"></p>
+    <script>
+        function addition()
+        {
+            var val1=document.getElementById("num1").value
+            var val2=document.getElementById("num2").value
+           var res_add=parseInt(val1)+parseInt(val2)
+        //    alert(res_add)
+        document.getElementById("para1").innerHTML=res_add
+     }
+     function subtraction()
+        {
+            var val3=document.getElementById("num1").value
+            var val4=document.getElementById("num2").value
+           var res_sub=parseInt(val3)-parseInt(val4)
+        //    alert(res_)
+        document.getElementById("para1").innerHTML=res_sub
+     }
+     function Multiplication()
+        {
+            var val1=document.getElementById("num1").value
+            var val2=document.getElementById("num2").value
+           var res_mul=parseInt(val1)*parseInt(val2)
+        //    alert(res_add)
+        document.getElementById("para1").innerHTML=res_mul
+     }
+
+    </script>
+</body>
+</html>

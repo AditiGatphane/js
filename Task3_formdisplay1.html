@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .warrper{
+            width: 80;
+            height: 900px;
+            border: 1px solid red;
+            background-color: aliceblue;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="warrper">
+    <form method="post" onsubmit="return formdisplay()" onfocus="formdisplay()">
+        <table align="center">
+            
+            <tr>
+                <td>Username:</td>
+                <td><input type="text" id="uname" onblur=""></td>
+                <td><span id="msg1"></span></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" id="pass"></td>
+                <td><span id="msg2"></span></td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td><input type="text" id="add"></td>
+                <td><span id="msg3"></span></td>
+            </tr>
+            <tr>
+                <td>Mobile Number:</td>
+                <td><input type="number" id="mob"></td>
+                <td><span id="msg4"></span></td>
+            </tr>
+            <tr>
+                <td>country</td>
+                <td><select name="" id="cntry">
+                    <option value="0">Select country</option>
+                    <option value="1">India</option>
+                    <option value="2">USA</option>
+                    <option value="3">Germany</option>
+                    <option value="4">UAE</option>
+                </select>
+                <td><span id="msg5"></span></td>
+            </td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td><input type="radio" id="gen1" name="gen" >Female</td>
+                <td><input type="radio" id="gen2" name="gen">Male</td>
+                <td><span id="msg6"></span></td>
+            </tr>
+            <tr>
+                <td>File:</td>
+                <td><input type="file" id="file" onchange="filevalidation()" ></td>
+                <td><span id="msg7"></span></td>
+            </tr>
+            <tr>
+                <td align="center" colspan="2"><input type="Submit" name="Sing Up"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+    <script>
+        function formdisplay(){
+            var Username=document.getElementById("uname").value 
+            var password=document.getElementById("pass").value
+            var address=document.getElementById("add").value
+            var mobilenum=document.getElementById("mob").value
+            var country=document.getElementById("cntry").value
+            var gender1=document.getElementById("gen1").checked
+            var gender2=document.getElementById("gen2").checked
+            var file=document.getElementById("file").value
+             
+            if(Username=="" || password=="" || address=="" ||mobilenum==""||country==""||
+            gender1==""||gender2==""||file=="")
+            { 
+             if(Username=="")
+            {
+                document.getElementById("msg1").innerHTML="Please Enter your name"
+                document.getElementById("msg1").style.color="red"
+                document.getElementById("uname").style.border="1px solid red"
+                
+            }
+              if(password<4||password>8)
+            {
+                document.getElementById("msg2").innerHTML="Please enter the password 4 to 8 btween"
+                document.getElementById("msg2").style.color="red"
+                document.getElementById("pass").style.border="1px solid red"
+            }
+            if(address=="")
+            {
+                document.getElementById("msg3").innerHTML="Please Fill up Address"
+                document.getElementById("msg3").style.color="red"
+                document.getElementById("add").style.border="1px solid red"
+            }
+            if(mobilenum==""||mobilenum>11)
+            {
+                document.getElementById("msg4").innerHTML="Please Fill up 10 Digit Number"
+                document.getElementById("msg4").style.color="red" 
+                document.getElementById("mob").style.border="1px solid red"
+            }
+            if( country=="")
+            {
+                document.getElementById("msg5").innerHTML="Select the option"
+                document.getElementById("msg5").style.color="red" 
+                document.getElementById("cntry").style.border="1px solid red" 
+            }
+            if(gender1=="")
+            {
+                document.getElementById("msg6").innerHTML="Select the option"
+                document.getElementById("msg6").style.color="red"
+                document.getElementById("gen1").style.border="1px soild red"
+            }
+            if(gender2=="")
+            {
+                document.getElementById("msg6").innerHTML="Select the option"
+                document.getElementById("msg6").style.color="red"
+                document.getElementById("gen2").style.border="1px soild red"   
+            }
+            if( file=="")
+            {
+                document.getElementById("msg6").innerHTML="Uplod new file"
+                document.getElementById("msg6").style.color="red"
+                document.getElementById("file").style.border="1px solid red"  
+            }
+            return false
+        }
+    }
+    </script>
+</body>
+</html>                   

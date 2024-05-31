@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task4</title>
+    <style>
+         .tb1
+        {
+            width: 600px;
+            height: 250px;
+            border: 2px solid red;
+            box-sizing: border-box;
+            background-color: antiquewhite;
+            position: absolute;
+            margin-left: 400px;
+            display: none;
+/* background-color: #00000099; */
+        } 
+        
+
+        .warrper
+        {
+            width: 100%;
+            height: 800px;
+            border: 2px solid red;
+            box-sizing: border-box;
+            background-color: antiquewhite;
+            position: absolute;
+           
+            
+        }
+        .btn{
+            align-items: center;
+           
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="warrper" id="wrapper">
+    <button id="btn_login" onclick="popup()">login</button>
+        <div>
+             <form method="post" onsubmit="return formvalidation()">
+                <table align="center">
+                    <tr>
+                        <td> Username:</td>
+                        <td>
+                            <input type="text" id="uname">
+                        </td>
+                        <td><span id="msg1"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td>
+                            <input type="password" id="pass">
+                        </td>
+                        <td>
+                            <span id="msg2"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ConfirmPassword:</td>
+                        <td><input type="password" id="cpass"></td>
+                        <td>
+                            <span id="msg3"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>country</td>
+                        <td><select name="" id="cntry">
+                            <option value="0">Select country</option>
+                            <option value="1">India</option>
+                            <option value="2">USA</option>
+                            <option value="3">Germany</option>
+                            <option value="4">UAE</option>
+                        </select>
+                        <td><span id="msg4"></span></td>
+                    </td>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td><input type="radio" id="gen1" name="gen">Female</td>
+                        <td><input type="radio" id="gen2" name="gen">Male</td>
+                        <td><span id="msg5"></span></td>
+                    </tr>
+                   
+                    <tr>
+                    <td align="center" colspan="2"><input type="button" value="SignUp" id=""></td>
+                </tr>
+                </table>
+             </form>
+        </div>
+    </div>
+
+<div></div>
+
+
+    <div class="tb1" id="popup_container">
+        <div>
+         <form method="post" onsubmit="return formvalidation()" onblur="formvalidation()">
+            <table align="center">
+                <tr>
+                    <td> Username:</td>
+                    <td>
+                        <input type="text" id="uname">
+                    </td>
+                    <td><span id="msg1"></span></td>
+                </tr>
+                
+                <tr>
+                <!-- <td align="center" colspan="2"><input type="submit" value="Signin" id="sub" onclick="submit"></td> -->
+                 <button class="btn">Button</button>
+      
+            </tr>
+    
+        </table>
+    
+    </form>
+    </div>
+    </div>
+    
+                <script> 
+                   function popup()
+                   {
+                    document.getElementById("wrapper").style.backgroundColor="#00000099"
+                    document.getElementById("popup_container").style.display="block"
+                }
+            
+               
+     </script>
+    </body>
+    </html>

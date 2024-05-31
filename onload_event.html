@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="date_display();month_display();year_display()">
+    <select name="Day" id="day">
+        <option value="">select day</option>
+</select>
+    <select name="Month" id="Month">
+        <option value="">select month</option>
+    </select>
+    <select name="year" id="Year">
+        <option value="">select year</option>
+    </select>
+    <script>
+        function date_display()
+        {
+          for(var i=1;i<=31;i++)
+          {
+            document.getElementById("day").innerHTML+="<option>"+i+"</option>"
+          }
+        }
+        function month_display()
+        {
+          for(var m=1;m<=12;m++)
+          {
+            document.getElementById("Month").innerHTML+="<option>"+m+"</option>"
+          }
+        }
+        function year_display()
+        {
+          for(var y=1988;y<=2025;y++)
+          {
+            document.getElementById("Year").innerHTML+="<option>"+y+"</option>"
+          }
+        }
+    </script>
+</body>
+</html>

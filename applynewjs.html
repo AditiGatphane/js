@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js classnew</title>
+    <style>
+        .sample
+        {
+           color: red;
+        }
+        .demo{
+            font-size: 20px;
+        }
+        .test{
+            background-color: aqua;
+        }
+    </style>
+
+</head>
+<body>
+    <button onclick="applycss()">Click css</button>
+    <h1 id="heading">Js heading</h1>
+    <p id="para" class="sample test">my new heading</p>
+    <span id="span1" class="demo sample">Span</span>
+    <script>
+       function applycss()
+       {
+        document.getElementById("heading").classList.add("sample")
+        document.getElementById("para").classList.remove("sample")
+        document.getElementById("span1").classList.remove("sample")
+       }
+    </script>
+    
+</body>
+</html>

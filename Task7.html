@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task7-Display-colck</title>
+</head>
+<body>
+   
+    <p id="para" onclick="sample()"></p>
+    <br>
+    <button id="but" onclick="sample()">Stop</button>
+    <script>
+   
+    function sample()
+        {
+            var d=new Date()
+            // document.write(d+"<br>")
+            var dis_fulltime=d.toLocaleTimeString()
+    document.getElementById("para").innerHTML=dis_fulltime
+        }
+        var x=setInterval(sample,1000)
+        function stop(){
+
+        }
+       
+   
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popus_js</title>
+</head>
+<body>
+    <button onclick="Openalert()">Open alert</button>
+    <button onclick="OpenConfirmbox()">Open Confirmbox</button>
+    <button onclick="OpenPrompt()">Open Prompt</button>
+    <script>
+        function Openalert()
+        {
+            window.alert("This is alert box")
+        }
+        function OpenConfirmbox()
+        {
+         var r=confirm("Are you sure")
+         if(r==true)
+         {
+            // alert("You have to clikcked ok button")
+            window.location="https://www.youtube.com/watch?v=4-ByxpKDmzs"
+         }
+         else
+         {
+            alert("You have to clikcked cancal button")
+         }
+        }
+         function OpenPrompt()
+         {
+            var x=prompt("Enter your name")
+            if(x==null)
+            {
+                alert("welcome:Guest")
+            }
+            else if(x=="")
+            {
+                alert("welcome:Guest") 
+            }
+            else
+            {
+                alert("welcome: "+x)
+            }
+         }
+
+    </script>
+</body>
+</html>

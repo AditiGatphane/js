@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="txt" placeholder="Enter Name">
+    <button onclick="getvalue()">Click</button>
+    <p id="para"></p>
+<script>
+    function getvalue()
+    {
+   var val=document.getElementById("txt").value
+//    alert(val)
+       document.getElementById("para").innerHTML=val
+    }
+
+    </script>
+</body>
+</html>

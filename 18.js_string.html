@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    <script>
+        var str="This is String"
+        document.write(str+"<br>")
+        document.write(typeof str+"<br>")
+        document.write(str[1]+"<br>")
+        document.write(str[4]+"<br>")
+
+
+
+        //to find the length of a string
+        document.write(str.length+"<br>")
+
+
+        // new string 
+        var str1=" This is String "
+        document.write(str1.length+"<br>")
+
+
+
+        //trim
+        var newstr=str1.trim()
+        document.write(newstr+"<br>")
+        document.write(typeof newstr+"<br>")
+
+        for(var x=1;x<str1.length-1;x++){
+            document.write(str1[x]+"<br>")
+        }
+         var str2=new String("This is a string")
+         document.write(str2+"<br>")
+         document.write(typeof str2+"<br>")
+         document.write(newstr===str2+"<br>")
+    </script>
+</body>
+</html>

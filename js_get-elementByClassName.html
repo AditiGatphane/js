@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="sample()">Get Value</button>
+    <p class="para">Paragraph1</p>
+    <span class="para">span765</span>
+    <p class="para">Paragraph2</p>
+    <p class="para">Paragraph3</p>
+    <p class="para">Paragraph4</p>
+    <p class="para">Paragraph5</p>
+    <script>
+             function sample()
+             {
+                var val=document.getElementsByClassName("para")
+                alert(val.length)
+                alert(val[0])
+                alert(val[1].innerHTML)
+                val[1].style.color="red"
+                val[2].style.color="blue"
+             }
+    </script>
+</body>
+</html>

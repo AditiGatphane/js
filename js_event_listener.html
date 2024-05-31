@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js event</title>
+    <style>
+         #div1
+        {
+        width: 30%;
+        border: 1px solid black;
+        box-sizing: border-box;
+        background-color: aqua;
+    }
+    #para1
+    {
+      width: 100%;
+      border: 1px solid black;
+        box-sizing: border-box;
+        background-color: rgb(43, 255, 0);
+      
+    }
+    </style>
+   
+</head>
+<body>
+    <div id="div1">
+        <p id="para1"> This is a Paragraph</p>
+    </div>
+    <script>
+        function sample()
+        {
+           alert("Div is Clicked!!!!!")
+        }
+        function p_sample()
+        {
+           alert("para is Clicked!!!!!")
+        }
+        document.getElementById("div1").addEventListener("click",sample,true)
+        document.getElementById("para1").addEventListener("click", p_sample,true)
+    </script>
+</body>
+</html>

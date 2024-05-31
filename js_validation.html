@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <form method="post" onsubmit="return formvalidation()">
+    <table align="center">
+        <tr>
+            <td> Username:</td>
+            <td>
+                <input type="text" id="uname">
+            </td>
+            <td><span id="msg1"></span></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td>
+                <input type="password" id="pass">
+            </td>
+            <td>
+                <span id="msg2"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>ConfirmPassword:</td>
+            <td><input type="password" id="cpass"></td>
+            <td>
+                <span id="msg3"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>country</td>
+            <td><select name="" id="cntry">
+                <option value="0">Select country</option>
+                <option value="1">India</option>
+                <option value="2">USA</option>
+                <option value="3">Germany</option>
+                <option value="4">UAE</option>
+            </select>
+            <td><span id="msg4"></span></td>
+        </td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td><input type="radio" id="gen1" name="gen">Female</td>
+            <td><input type="radio" id="gen2" name="gen">Male</td>
+            <td><span id="msg5"></span></td>
+        </tr>
+        <tr>
+            <td>File:</td>
+            <td><input type="file" id="file" onchange="filevalidation()"></td>
+            <td><span id="msg6"></span></td>
+        </tr>
+        <tr>
+        <td align="center" colspan="2"><input type="submit" value="SignUp" id=""></td>
+    </tr>
+    </table>
+ </form>
+            <script> 
+               function formvalidation()
+               {
+                var Username=document.getElementById("uname").value 
+                var Password=document.getElementById("pass").value 
+                var cPassword=document.getElementById("cpass").value 
+                var country=document.getElementById("cntry").value 
+                var female=document.getElementById("gen1").checked
+                var male=document.getElementById("gen2").checked 
+                 if(Username=="")
+                {
+                    document.getElementById("msg1").innerHTML="Pleses enter the name"
+                    document.getElementById("msg1").style.color="red"
+                    return false
+                }
+                if(Password=="")
+                {
+                    document.getElementById("msg2").innerHTML="Pleses enter the password"
+                    document.getElementById("msg2").style.color="red"
+                    return false
+                }
+                if(Password.length<4 || Password.length>8 )
+                    {
+                        document.getElementById("msg2").innerHTML="Please enter the password 4 to 8 btween"
+                    document.getElementById("msg2").style.color="red"
+                    return false
+                    }
+                if(cPassword!=Password){
+
+               
+                    document.getElementById("msg3").innerHTML="Password not Match"
+                    document.getElementById("msg3").style.color="red"
+                    return false
+                }
+                if(country=="0"){
+                    document.getElementById("msg4").innerHTML="Please select country"
+                    document.getElementById("msg4").style.color="red"
+                    return false
+                }
+                if(female==false && male==false){
+                    document.getElementById("msg5").innerHTML="Please select Gender"
+                    document.getElementById("msg5").style.color="red"
+                    return false
+                }
+            }
+                function filevalidation(){
+                    var fname=document.getElementById("file").value 
+                    alert(fname)
+                    var ext=fname.lastIndextOf(".")
+                    alert(ext)
+                    var final_ext=fname.substring(ext)
+                    alert(final_ext)
+                    if(final_ext==".jpg" || final_ext==".jpeg" ||final_ext=="png")
+                    {
+                        document.getElementById("msg6").innerHTML=""
+                        document.getElementById("msg6").disabled=false
+                    }
+                    else{
+                        document.getElementById("msg6").innerHTML="Please select only .jpd ,.jpeg or .png file"
+                        document.getElementById("msg6").disabled=true
+                        document.getElementById("msg6").style.color="red"
+                    }
+
+                }
+           
+ </script>
+</body>
+</html>

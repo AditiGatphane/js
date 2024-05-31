@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task8 createElement</title>
+    <style>
+        .demo{
+            width: 30%;
+            height: 200px;
+            border: 2px solid red;
+            box-sizing: border-box;
+            margin-top: 20px;
+        }
+        .h1{
+            color: blueviolet;
+        }
+        .para{
+            color: aqua;
+            font-size: medium;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="createElement1()" id="btn">Click</button>
+  
+<script>
+    function createElement1(){
+        var btn_ele=document.getElementById("btn")
+    var div_ele=document.createElement("div")
+    div_ele.setAttribute("class","demo")
+    btn_ele.after(div_ele)
+
+
+
+
+     var h1_ele=document.createElement("h1")
+     h1_ele.innerHTML="Create Element"
+     h1_ele.setAttribute("align","center")
+     h1_ele.setAttribute("class","h1")
+     div_ele.prepend(h1_ele)
+
+
+
+    var para_ele=document.createElement("p")
+    para_ele.innerHTML="My new paragraph elemet is display "
+    para_ele.setAttribute("align","center")
+    para_ele.setAttribute("class","para")
+     h1_ele.after(para_ele)
+
+
+    var span_ele=document.createElement("span")
+    span_ele.innerHTML="Span is good element"
+    span_ele.setAttribute("align","center")
+    para_ele.after(span_ele)
+   
+    
+   
+    
+    
+    
+   
+
+
+    
+ }
+
+</script>
+</body>
+</html>

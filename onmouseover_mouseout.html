@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouseover_mouseout</title>
+</head>
+<body>
+    <img src="../Image/960x0.jpg"  id="img" width="200" height="200" onmouseover="img1()" onmouseout="img2()">
+   
+    <script>
+        function img1()
+        {
+            document.getElementById("img").src="../Image/boom.png"
+        }
+        function img2()
+        {
+            document.getElementById("img").src="../Image/960x0.jpg" 
+        }
+    </script>
+</body>
+</html>

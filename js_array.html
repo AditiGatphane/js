@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+</head>
+<body>
+    <script>
+        var empdetails=[101,"Aditi","aditi@gmail.com",123456789,true,100000000000000]
+        document.write(empdetails +"<br>")
+        document.write(typeof empdetails+"<br>")
+        document.write("Id is:-" +empdetails[0]+"<br>")
+        document.write("Salary is:-" +empdetails[5]+"<br>")
+              
+
+      //length of array
+
+        var len_array=empdetails.length
+        document.write(len_array+"<br>")
+
+        var last_val=empdetails[len_array-1]
+        document.write(last_val+"<br>")
+
+
+        for(var x=0;x<=empdetails.length-1;x++)
+        {
+            document.write(empdetails[x]+"<br>")  
+        }
+
+
+
+        var stu_details=[]
+         stu_details[0]=1
+         stu_details[1]="Aditi"
+         stu_details[2]="aditi@gmail.com"
+         stu_details[3]="IT Branch"
+        document.write(stu_details+"<br>")
+
+        
+//object method
+      var sample=new Array(1,"aditi",7654322)
+       document.write(sample+"<br>")
+
+
+    </script>
+</body>
+</html>

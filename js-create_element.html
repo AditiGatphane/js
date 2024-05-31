@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create element</title>
+</head>
+<body>
+   <!--  prepend -->
+    <!-- append -->
+    <!-- after -->
+    <!-- befor -->
+
+    <button onclick="createparaelement()" id=btn">Click</button>
+    <script>
+        function createparaelement()
+        {
+          var para_ele=document.createElement("p")
+          para_ele.innerHTML="This is my new paragraph"
+          para_ele.setAttribute("align","center")
+          para_ele.setAttribute("class","test")
+        //   document.body.prepend(para_ele)
+        document.body.append(para_ele)
+        var btn_element=document.getElementById("btn")
+        btn_element.after(para_ele)
+        }
+    </script>
+</body>
+</html>

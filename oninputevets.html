@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="txt1" oninput="onw()">
+    <p id="para"></p>
+    <script>
+        function onw()
+        {
+        //    var val=document.getElementById("txt1").value
+        var val=document.getElementById("txt1").value.length
+           document.getElementById("para").innerHTML=val
+        }
+    </script>
+</body>
+</html>

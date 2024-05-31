@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onsumit_onreset</title>
+</head>
+<body>
+    <form action="#" onsubmit="sample()" onreset="sample1()">
+    <input type="submit">
+    <input type="reset">
+</form>
+<script>
+    function sample()
+    {
+        alert("Submit event is calling")
+    }
+    function sample1()
+    {
+         alert("Reset event is calling")
+    }
+</script>
+</body>
+</html>
